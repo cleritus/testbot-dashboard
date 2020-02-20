@@ -1,0 +1,15 @@
+// resusable: btns, navbars
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  @include flex-row;
+}
+
+.header{
+  &__icon{
+    opacity: .6;
+  }
+}

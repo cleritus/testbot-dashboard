@@ -1,0 +1,58 @@
+// resets, variables, mixins, utylity classes
+
+// grid columns defined by % - distance between px
+// font-family: SF PRO / Open Sans
+
+// Add a script to remove a question by clicking on the bin icon on its action bar. You don't have to worry about an "add" button or
+// saving the state (it can go back to the hard-coded state when refreshed).
+// Add a script to increase improvements questions' (the boxes on the dark background) upvote and downvote count upon clicking
+// the corresponding icon. Once again, you don't need to worry about saving the state. 
+// images as SVG
+
+// SF PRO FONT
+@font-face {
+    font-family: "SF Pro Display";
+    src: url('/font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// VARIABLES
+$mainBgColor: #e6ebf1;
+$headerColor: #465def;
+$white: #ffffff;
+
+// MIXINS
+@mixin flex-display($direct, $justify, $align){
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "SF Pro Display";
+    cursor: default;
+    font-size: 16px;
+}
+
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: $mainBgColor;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}

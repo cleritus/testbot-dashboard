@@ -1,0 +1,22 @@
+// handlers the layout: containers
+
+.header{
+  @include flex-row;
+  background-color: $headerColor;
+  color: hsla(0, 0%, 100%, 0.6);
+
+  &__l-menu{
+    @include flex-row;
+
+    ul{
+      @include flex-row;
+      li{
+        @include flex-row;
+      }
+    }
+  }
+
+  &__r-menu{
+    @include flex-row
+  }
+}
