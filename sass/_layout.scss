@@ -2,21 +2,32 @@
 
 .header{
   @include flex-row;
+  padding: 0 25px 0 30px;
   background-color: $headerColor;
-  color: hsla(0, 0%, 100%, 0.6);
+  color: $white;
+  font-size: 1.5rem;
 
   &__l-menu{
     @include flex-row;
-
-    ul{
-      @include flex-row;
-      li{
-        @include flex-row;
-      }
-    }
   }
 
   &__r-menu{
-    @include flex-row
+    @include flex-row;
+    height: 100%;
   }
+}
+
+// SECTION
+
+.section{
+  padding: 28px 22px 60px 30px;
+
+  &__box{
+    padding: 20px;
+    border-radius: 4px;
+  }
+}
+
+#section2{
+  background-color: #1c2237;
 }

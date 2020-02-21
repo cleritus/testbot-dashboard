@@ -1,15 +1,91 @@
 // resusable: btns, navbars
 
 button{
-  background-color: transparent;
+  // background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1em;
-  @include flex-row;
 }
 
 .header{
   &__icon{
-    opacity: .6;
+    padding-right: 8px;
+  }
+
+  ul{
+    @include flex-row;
+    li{
+      @include flex-row;
+      padding: 6px 10px;
+      // width: 112px;
+      // height: 34px;
+      border-radius: 4px;
+    }
+  }
+
+// Header Nav Opacity 
+
+.opacityColor{
+  opacity: .6;
+  transition: .3s;
+}
+
+li.opacityColor:hover{
+opacity: 1;
+background-color: $whiteOpacity;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  // ACTIVE MENU
+
+.active{
+  opacity: 1;
+  background-color: $whiteOpacity;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  &__bot-container{
+    @include flex-row;
+    padding: 6px 8px 6px 14px;
+    border-left: 1px solid $whiteOpacity;
+    border-right: 1px solid $whiteOpacity;
+    margin-right: 14px;
+
+    span{
+      padding-right: 6px;
+    }
+  }
+
+  &__avatar{
+    padding: 7px;
+    border-radius: 4px;
+    background-color:$whiteOpacity;
+  }
+
+  &__log-info{
+    @include flex-display(column, center,center);
+    :nth-child(1){
+      font-size: 1.2rem;
+    }
+    :nth-child(2){
+      font-size: 1rem;
+    }
+    padding: 0 10px;
+  }
+
+  &__dropdown{
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+
+// SECTION 
+
+.section{
+  &__head{
+    font-family: "SF Pro Text";
+    h2{
+      font-size: 16px;
+    }
   }
 }
