@@ -10,6 +10,7 @@
 // images as SVG
 
 // SF PRO FONT
+
 @font-face {
   font-family: "SF Pro Display";
 	src: url('/font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
@@ -17,16 +18,22 @@
   font-style: normal;
 }
 
-// @font-face {
-//   font-family: "SF Pro Text";
-// 	src: url('/font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
-// 	font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "SF Pro Text";
+	src: url('/font/TrueType/SFProText-Regular.ttf') format('truetype');
+	font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+	src: url('/font/TrueType/SFProText-Light.ttf') format('truetype');
+	font-weight: lighter;
+  font-style: normal;
+}
 
 // VARIABLES
 
-$mainBgColor: #e6ebf1;
 $headerColor: #465def;
 $white: #ffffff;
 $whiteOpacity: rgba(255, 255, 255, 0.12);
@@ -61,10 +68,9 @@ body{
   cursor: default;
 }
 
-.wrapper{
-  max-width: 1920px;
+.container{
+  max-width: 1130px;
   margin: 0 auto;
-  background-color: $mainBgColor;
 }
 
 ul{
@@ -76,12 +82,14 @@ li{
   cursor: pointer;
 }
 
+.d-flex{
+  display: flex;
+}
 
-input{
-	// width: 109px;
-	// height: 34px;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
-	border: none;
-	border-radius: 4px;
-	background-color: #ffffff;
+span.red{
+  color:#fb726f;
+}
+
+.orange{
+  color:#f8a86b
 }

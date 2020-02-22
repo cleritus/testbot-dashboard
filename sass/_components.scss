@@ -1,7 +1,7 @@
 // resusable: btns, navbars
 
 button{
-  // background-color: transparent;
+  @include flex-display(row, center,center);
   border: none;
   cursor: pointer;
   font-size: 1em;
@@ -74,6 +74,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   &__dropdown{
+    @include flex-row;
     margin-left: 20px;
     cursor: pointer;
   }
@@ -85,7 +86,61 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   &__head{
     font-family: "SF Pro Text";
     h2{
-      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: lighter;
+      margin: 0;
+    }
+
+    p{
+      font-size: 1.4rem;
+      line-height: 22px;
+      color: #838eab;
+      margin-top: 0;
+    }
+  }
+
+  &__row{
+    font-size: 1.4rem;
+  }
+
+  &__row-question{
+    span{
+      // font-size: 1.4rem;
+      margin-left: 14px;
+    }
+  }
+
+  &__row-answer{
+
+    input{
+      width: 100%;
+      height: 48px;
+      margin-bottom: 20px;
+      padding: 0;
+      border: 1px solid #e6ebf1;
+      text-indent: 14px;
+    }
+
+    a{
+      font-weight: 500;
+      color: #838eab;
+    }
+
+    .train-btn{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 83px;
+      height: 34px;
+      box-shadow: 0 2px 5px rgba(50, 50, 93, 0.1);
+      border-radius: 4px;
+      background-color: #4457f3;
+      color: $white;
+
+      img{
+        padding-left: 6px;
+      }
     }
   }
 }
