@@ -22,14 +22,6 @@
 
 // SECTION
 
-#section1{
-  background-color: #e6ebf1;
-}
-
-#section2{
-  background-color: #1c2237;
-}
-
 .section{
   padding: 28px 22px 60px 30px;
 
@@ -41,35 +33,94 @@
 
   &__box{
     width: 32%;
-    padding-top: 20px;
     border-radius: 4px;
     background-color: #fff; 
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
+  }
+
+  &__row-head{
+    @include flex-display(column, center, flex-start);
+    min-height: 55px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e6ebf1;
   }
 
   &__row-question{
     @include flex-display(row, flex-start, center);
-    min-height: 55px;
-    padding: 0 20px 20px 20px;
-    border-bottom: 1px solid #e6ebf1;
   }
 
   &__row-answer{
-    padding: 20px 10px;
-    background-color: #f6f9fc;
-    border-bottom: 1px solid #e6ebf1;
-
-  }
-
-  &__answer-view{
-    position: relative;
-    @include flex-display(row, center, center);
-    width: 100%;
+    margin-left: 27px;
+    margin-top: 4px;
+    color: #838eab;
   }
 
   &__row-foot{
     @include flex-row;
-    padding: 12px 20px;
     color: #838eab;
+  }
+}
+
+//SECTION 1
+
+#section1{
+  background-color: #e6ebf1;
+
+  .section{
+    &__row-content{
+      padding: 20px 10px;
+      background-color: #f6f9fc;
+      border-bottom: 1px solid #e6ebf1;
+    }
+    
+    &__answer-view{
+      position: relative;
+      @include flex-display(row, center, center);
+      width: 100%;
+    }
+
+    &__row-foot{
+      padding: 12px 20px;
+    }
+  }
+}
+
+// SECTION 2
+
+#section2{
+  background-color: #1c2237;
+
+  .section{
+
+    &__box{
+      background-color: #212943;    }
+
+    &__row-head{
+      @include flex-display(column, flex-start, flex-start);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 20px;
+      padding-bottom: 26px;
+    }
+
+    &__row-review{
+      @include flex-display(row, center, center);
+      padding: 16px;
+    }
+     
+    &__row-review:nth-child(1){
+      width: 28%;
+      border-right: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    &__row-review:nth-child(4){
+      width: 28%;
+      justify-content: flex-end;
+    }
+
+     &__row-review:nth-child(2), &__row-review:nth-child(3){
+        width: 22%;
+        border-right: 1px solid rgba(255, 255, 255, 0.04);
+      }
   }
 }
 

@@ -83,8 +83,10 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 // SECTION 
 
 .section{
+  
   &__head{
     font-family: "SF Pro Text";
+
     h2{
       font-size: 1.6rem;
       font-weight: lighter;
@@ -103,14 +105,14 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 1.4rem;
   }
 
-  &__row-question{
-    span{
-      // font-size: 1.4rem;
+  &__row-head{
+
+    h3{
       margin-left: 14px;
     }
   }
 
-  &__row-answer{
+  &__row-content{
 
     input{
       width: 100%;
@@ -143,4 +145,36 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
     }
   }
+}
+
+//SECTION 1
+
+#section1{
+  h2{
+    color: #3c3c3f;
+  }
+
+  h3{
+    font-size: 1.4rem;
+    line-height: 16px;
+    color: #1c2238;
+  }
+}
+
+// SECTION 2
+
+#section2{
+  h2{
+    color: $white;
+  }
+
+  h3{
+    font-size: 1.6rem;
+    color: $white;
+  }
+
+    .review-counter{
+      margin-left: 10px;
+    }
+  
 }
