@@ -113,16 +113,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   &__row-content{
-
-    // input{
-    //   width: 100%;
-    //   height: 48px;
-    //   // margin-bottom: 20px;
-    //   padding: 0;
-    //   border: 1px solid #e6ebf1;
-    //   text-indent: 14px;
-    // }
-
     a{
       font-weight: 500;
       color: #838eab;
@@ -144,6 +134,11 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         padding-left: 6px;
       }
     }
+  }
+
+  // Bin button removing box
+  .bin{
+    cursor: pointer;
   }
 }
 
@@ -173,8 +168,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: $white;
   }
 
-    .review-counter{
-      margin-left: 10px;
-    }
-  
+  .review-counter{
+    margin-left: 10px;
+  }
 }

@@ -287,6 +287,7 @@ span.red {
       -ms-flex-align: center;
           align-items: center;
   padding: 16px;
+  cursor: pointer;
 }
 
 #section2 .section__row-review:nth-child(1) {
@@ -505,6 +506,10 @@ button {
   padding-left: 6px;
 }
 
+.section .bin {
+  cursor: pointer;
+}
+
 #section1 h2 {
   color: #3c3c3f;
 }
@@ -621,6 +626,11 @@ button[type=submit],
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 1px solid #e6ebf1;
+  cursor: pointer;
+}
+
+.input-option .input-number {
+  width: 55px;
 }
 
 .input-option .input-number-btn {
