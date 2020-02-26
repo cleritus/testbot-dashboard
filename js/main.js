@@ -9,11 +9,14 @@ const upCounter = [...document.querySelectorAll('.up-counter')];
 const thumbsDown = [...document.querySelectorAll('.thumb-down')];
 const downCounter = [...document.querySelectorAll('.down-counter')];
 
+const bin = document.querySelectorAll('.bin');
+
 let number = 0;
+
+// Change numbers in input
 
 function handleArrowUp() {
 
-  // Increase number in input
   if (this.dataset.arrow === inputNumber.id && number < 6) {
     number++;
   } else return;
@@ -25,7 +28,6 @@ function handleArrowUp() {
 
 function handleArrowDown() {
 
-  // Decrease number in input
   if (this.dataset.arrow === inputNumber.id && number > 0) {
     number--;
   } else return;
@@ -33,6 +35,15 @@ function handleArrowDown() {
   inputNumber.textContent = number;
 };
 
+// Close box - bin icon
+
+function closeBox() {
+
+  document.getElementById(this.dataset.bin).style.display = 'none';
+}
+
+
+// SECTION 2 THUMBS UP / DOWN
 
 class Box {
   constructor(idUp, idDown) {
@@ -171,6 +182,10 @@ inputArrow.forEach(arrow => arrow.addEventListener('mouseup', function () {
   this.style.backgroundColor = '#fff';
 
 }));
+
+// Bin handler
+
+bin.forEach(item => item.addEventListener('click', closeBox));
 
 // Thumbs up/down handler
 
