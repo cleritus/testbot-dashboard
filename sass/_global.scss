@@ -13,22 +13,22 @@
 
 @font-face {
   font-family: "SF Pro Display";
-	src: url('/font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
-	font-weight: normal;
+  src: url('/font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SF Pro Text";
-	src: url('/font/TrueType/SFProText-Regular.ttf') format('truetype');
-	font-weight: normal;
+  src: url('/font/TrueType/SFProText-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SF Pro Text";
-	src: url('/font/TrueType/SFProText-Light.ttf') format('truetype');
-	font-weight: lighter;
+  src: url('/font/TrueType/SFProText-Light.ttf') format('truetype');
+  font-weight: lighter;
   font-style: normal;
 }
 
@@ -40,27 +40,31 @@ $whiteOpacity: rgba(255, 255, 255, 0.12);
 
 // MIXINS
 
-@mixin flex-display($direct, $justify, $align){
+@mixin flex-display($direct, $justify, $align) {
   display: flex;
-	flex-direction: $direct;
+  flex-direction: $direct;
   justify-content: $justify;
   align-items: $align;
 }
 
-@mixin flex-row{
+@mixin flex-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}  
+}
 
 // RESET
 
-html{
-  font-size: 62.5%; 
+html {
+  font-size: 62.5%;
+
+  @media(max-width: 480px) {
+    font-size: 52%;
+  }
 }
 
-body{
+body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -68,35 +72,34 @@ body{
   cursor: default;
 }
 
-.container{
-  max-width: 1130px;
+.container {
+  max-width: 1536px;
   margin: 0 auto;
 }
 
-ul{
+ul {
   margin: 0;
 }
 
-li{
+li {
   list-style: none;
   cursor: pointer;
 }
 
-h3{
+h3 {
   font-weight: normal;
   margin: 0;
   padding: 0;
 }
 
-.d-flex{
+.d-flex {
   display: flex;
 }
 
-span.red{
-  color:#fb726f;
+span.red {
+  color: #fb726f;
 }
 
-.orange{
-  color:#f8a86b
+.orange {
+  color: #f8a86b
 }
-

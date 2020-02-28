@@ -12,7 +12,7 @@ button[type=submit],
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #838eab;
   opacity: 1;
-  /* Firefox */
+  font-size: 1.4rem;
 }
 
 :-ms-input-placeholder {
@@ -25,7 +25,7 @@ button[type=submit],
   color: #838eab;
 }
 
-// OPTION INPUT
+// INPUT-option
 
 .input-option {
   color: #838eab;
@@ -88,10 +88,21 @@ button[type=submit],
 
 .search-form {
   @include flex-display(row, flex-start, center);
+  flex-wrap: wrap;
+
+  @media(max-width: 480px) {
+    @include flex-display(column, flex-start, flex-start);
+  }
+
 }
 
 .search-container {
   margin-left: 10px;
+
+  @media(max-width: 480px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 
   button.search-btn {
     height: 34px;

@@ -1,20 +1,20 @@
 // handlers the layout: containers
 
-.header{
-  padding: 10px 25px 10px 30px;
+.header {
+  padding: 10px 30px;
   background-color: $headerColor;
   color: $white;
   font-size: 1.5rem;
 
-  &__container{
+  &__container {
     @include flex-row;
   }
 
-  &__l-menu{
+  &__l-menu {
     @include flex-row;
   }
 
-  &__r-menu{
+  &__r-menu {
     @include flex-row;
     height: 100%;
   }
@@ -22,65 +22,86 @@
 
 // SECTION
 
-.section{
-  padding: 28px 22px 60px 30px;
+.section {
+  padding: 30px 0;
 
-  &__body{
+  &__head {
+    padding: 0 30px;
+  }
+
+  &__body {
     @include flex-display(row, space-between, flex-start);
-    flex: wrap;
     margin-top: 35px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+
+    @media(max-width: 768px) {
+      @include flex-display(column, flex-start, center);
+      padding: 0;
+    }
   }
 
-  &__box{
+  &__box {
     width: 32%;
+    margin-bottom: 30px;
     border-radius: 4px;
-    background-color: #fff; 
+    background-color: $white;
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
+
+    @media(max-width: 1024px) {
+      width: 48%;
+    }
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
   }
 
-  &__row-head{
+  &__row-head {
     @include flex-display(column, center, flex-start);
     min-height: 55px;
     padding: 10px 20px;
     border-bottom: 1px solid #e6ebf1;
   }
 
-  &__row-question{
+  &__row-question {
     @include flex-display(row, flex-start, center);
   }
 
-  &__row-answer{
+  &__row-answer {
     margin-left: 27px;
     margin-top: 4px;
     color: #838eab;
   }
 
-  &__row-foot{
+  &__row-foot {
     @include flex-row;
     color: #838eab;
   }
+
+
 }
 
 //SECTION 1
 
-#section1{
+#section1 {
   background-color: #e6ebf1;
 
-  .section{
-    &__row-content{
+  .section {
+    &__row-content {
       padding: 20px 10px;
       background-color: #f6f9fc;
       border-bottom: 1px solid #e6ebf1;
     }
-    
-    &__answer-view{
+
+    &__answer-view {
       position: relative;
       @include flex-display(row, center, center);
       width: 100%;
       margin-top: 20px;
     }
 
-    &__row-foot{
+    &__row-foot {
       padding: 12px 20px;
     }
   }
@@ -88,41 +109,100 @@
 
 // SECTION 2
 
-#section2{
+#section2 {
   background-color: #1c2237;
 
-  .section{
+  .section {
 
-    &__box{
-      background-color: #212943;    }
-
-    &__row-head{
-      @include flex-display(column, flex-start, flex-start);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      padding-top: 20px;
-      padding-bottom: 26px;
+    &__box {
+      background-color: #212943;
     }
 
-    &__row-review{
+    &__box:hover>.section__row-head {
+      background-color: #4457f3;
+    }
+
+    &__box:hover .section__row-head>span {
+      color: $white;
+    }
+
+    &__row-head {
+      @include flex-display(column, flex-start, flex-start);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding-top: 20px;
+      padding-bottom: 26px;
+      transition: .3s;
+    }
+
+    &__row-review {
       @include flex-display(row, center, center);
       padding: 16px;
       cursor: pointer;
     }
-     
-    &__row-review:nth-child(1){
+
+    &__row-review:nth-child(1) {
       width: 28%;
       border-right: 1px solid rgba(255, 255, 255, 0.04);
     }
 
-    &__row-review:nth-child(4){
+    &__row-review:nth-child(4) {
       width: 28%;
       justify-content: flex-end;
+
+      @media(max-width: 768px) {
+        justify-content: center;
+      }
     }
 
-     &__row-review:nth-child(2), &__row-review:nth-child(3){
-        width: 22%;
-        border-right: 1px solid rgba(255, 255, 255, 0.04);
-      }
+    &__row-review:nth-child(2),
+    &__row-review:nth-child(3) {
+      width: 22%;
+      border-right: 1px solid rgba(255, 255, 255, 0.04);
+    }
   }
 }
 
+// Mobile Boxes
+
+#section1,
+#section2 {
+
+  .section {
+
+    &__head,
+    &__row-head,
+    &__row-content {
+
+      @media(max-width: 768px) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    &__row-foot {
+      @media(max-width: 768px) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+#section2 {
+  .section {
+    &__row-foot {
+
+      @media(max-width: 768px) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      @media(max-width: 480px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

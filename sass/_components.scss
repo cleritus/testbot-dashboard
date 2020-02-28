@@ -1,20 +1,26 @@
 // resusable: btns, navbars
 
-button{
-  @include flex-display(row, center,center);
+button {
+  @include flex-display(row, center, center);
   border: none;
   cursor: pointer;
   font-size: 1em;
+  outline: none;
 }
 
-.header{
-  &__icon{
+.header {
+  &__icon {
     padding-right: 8px;
   }
 
-  ul{
+  ul {
     @include flex-row;
-    li{
+
+    @media(max-width: 1024px) {
+      display: none;
+    }
+
+    li {
       @include flex-row;
       padding: 6px 10px;
       // width: 112px;
@@ -23,57 +29,60 @@ button{
     }
   }
 
-// Header Nav Opacity 
+  // Header Nav Opacity 
 
-.opacityColor{
-  opacity: .6;
-  transition: .3s;
-}
+  .opacityColor {
+    opacity: .6;
+    transition: .3s;
+  }
 
-li.opacityColor:hover{
-opacity: 1;
-background-color: $whiteOpacity;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  li.opacityColor:hover {
+    opacity: 1;
+    background-color: $whiteOpacity;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
   // ACTIVE MENU
 
-.active{
-  opacity: 1;
-  background-color: $whiteOpacity;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  .active {
+    opacity: 1;
+    background-color: $whiteOpacity;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
-  &__bot-container{
+  &__bot-container {
     @include flex-row;
     padding: 6px 8px 6px 14px;
     border-left: 1px solid $whiteOpacity;
     border-right: 1px solid $whiteOpacity;
     margin-right: 14px;
 
-    span{
+    span {
       padding-right: 6px;
     }
   }
 
-  &__avatar{
+  &__avatar {
     padding: 7px;
     border-radius: 4px;
-    background-color:$whiteOpacity;
+    background-color: $whiteOpacity;
   }
 
-  &__log-info{
-    @include flex-display(column, center,center);
-    :nth-child(1){
+  &__log-info {
+    @include flex-display(column, center, center);
+
+    :nth-child(1) {
       font-size: 1.2rem;
     }
-    :nth-child(2){
+
+    :nth-child(2) {
       font-size: 1rem;
     }
+
     padding: 0 10px;
   }
 
-  &__dropdown{
+  &__dropdown {
     @include flex-row;
     margin-left: 20px;
     cursor: pointer;
@@ -82,43 +91,56 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 // SECTION 
 
-.section{
-  
-  &__head{
+.section {
+
+  &__head {
     font-family: "SF Pro Text";
 
-    h2{
+    h2 {
       font-size: 1.6rem;
-      font-weight: lighter;
+      font-weight: bold;
       margin: 0;
+      margin-bottom: 5px;
     }
 
-    p{
+    p {
       font-size: 1.4rem;
-      line-height: 22px;
+      line-height: 18px;
       color: #838eab;
       margin-top: 0;
+
+      @media(max-width: 411px) {
+        line-height: 16px;
+      }
     }
   }
 
-  &__row{
+  &__row {
     font-size: 1.4rem;
   }
 
-  &__row-head{
+  &__row-head {
 
-    h3{
+    h3 {
       margin-left: 14px;
     }
   }
 
-  &__row-content{
-    a{
+  &__row-content {
+    a {
       font-weight: 500;
       color: #838eab;
+      transition: .3s;
+
+      margin-right: 3px;
     }
 
-    .train-btn{
+    a:hover {
+      color: #4457f3;
+      font-weight: bold;
+    }
+
+    .train-btn {
       position: absolute;
       top: 50%;
       right: 0;
@@ -129,27 +151,36 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
       background-color: #4457f3;
       color: $white;
+      transition: .3s;
 
-      img{
+      img {
         padding-left: 6px;
       }
+    }
+
+    .train-btn:hover {
+      background-color: transparent;
+      color: #4457f3;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(50, 50, 93, 0.1);
     }
   }
 
   // Bin button removing box
-  .bin{
+
+  .bin {
     cursor: pointer;
   }
 }
 
 //SECTION 1
 
-#section1{
-  h2{
+#section1 {
+  h2 {
     color: #3c3c3f;
   }
 
-  h3{
+  h3 {
     font-size: 1.4rem;
     line-height: 16px;
     color: #1c2238;
@@ -158,17 +189,17 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 // SECTION 2
 
-#section2{
-  h2{
+#section2 {
+  h2 {
     color: $white;
   }
 
-  h3{
+  h3 {
     font-size: 1.6rem;
     color: $white;
   }
 
-  .review-counter{
+  .review-counter {
     margin-left: 10px;
   }
 }
