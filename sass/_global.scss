@@ -13,21 +13,21 @@
 
 @font-face {
   font-family: "SF Pro Display";
-  src: url('/font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
+  src: url('./font/TrueType/SFProDisplay-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SF Pro Text";
-  src: url('/font/TrueType/SFProText-Regular.ttf') format('truetype');
+  src: url('./font/TrueType/SFProText-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SF Pro Text";
-  src: url('/font/TrueType/SFProText-Light.ttf') format('truetype');
+  src: url('./font/TrueType/SFProText-Light.ttf') format('truetype');
   font-weight: lighter;
   font-style: normal;
 }
