@@ -9,15 +9,7 @@ const upCounter = [...document.querySelectorAll('.up-counter')];
 const thumbsDown = [...document.querySelectorAll('.thumb-down')];
 const downCounter = [...document.querySelectorAll('.down-counter')];
 
-const burger = document.querySelectorAll('.burger');
-const navMobile = document.querySelector('.header__nav-mobile');
-
 const bin = document.querySelectorAll('.bin');
-
-function mobileNav() {
-  console.log(navMobile);
-  navMobile.classList.toggle('activeNav');
-}
 
 let number = 0;
 
@@ -106,7 +98,7 @@ function thumbUp() {
     }
   });
 
-  // Avarage
+  // Avarage 
   reviewAvg.forEach(item => {
 
     if (this.id === item.dataset.thumbup) {
@@ -170,14 +162,10 @@ function thumbDown() {
         item.textContent = math(box3.avg);
       }
     }
+
   })
 };
 
-//Hamburger
-
-burger.forEach(item => item.addEventListener('click', mobileNav));
-
-// Handle Input Arrows up/down
 
 inputArrowUp.forEach(arrow => arrow.addEventListener('click', handleArrowUp));
 

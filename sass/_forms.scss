@@ -30,7 +30,7 @@ button[type=submit],
 .input-option {
   color: #838eab;
   font-size: 1.4rem;
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Display", sans-serif;
 
   &__content {
     @include flex-display(column, center, flex-start);

@@ -13,23 +13,7 @@ button {
     padding-right: 8px;
   }
 
-  ul {
-    @include flex-row;
-
-    @media(max-width: 1024px) {
-      display: none;
-    }
-
-    li {
-      @include flex-row;
-      padding: 6px 10px;
-      // width: 112px;
-      // height: 34px;
-      border-radius: 4px;
-    }
-  }
-
-  // Header Nav Opacity 
+  // Header Nav Opacity
 
   .opacityColor {
     opacity: .6;
@@ -37,14 +21,6 @@ button {
   }
 
   li.opacityColor:hover {
-    opacity: 1;
-    background-color: $whiteOpacity;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  // ACTIVE MENU
-
-  .active {
     opacity: 1;
     background-color: $whiteOpacity;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -89,12 +65,12 @@ button {
   }
 }
 
-// SECTION 
+// SECTION
 
 .section {
 
   &__head {
-    font-family: "SF Pro Text";
+    font-family: "SF Pro Text", sans-serif;
 
     h2 {
       font-size: 1.6rem;
