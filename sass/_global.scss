@@ -1,14 +1,3 @@
-// resets, variables, mixins, utylity classes
-
-// grid columns defined by % - distance between px
-// font-family: SF PRO / Open Sans
-
-// Add a script to remove a question by clicking on the bin icon on its action bar. You don't have to worry about an "add" button or
-// saving the state (it can go back to the hard-coded state when refreshed).
-// Add a script to increase improvements questions' (the boxes on the dark background) upvote and downvote count upon clicking
-// the corresponding icon. Once again, you don't need to worry about saving the state. 
-// images as SVG
-
 // SF PRO FONT
 
 @font-face {
@@ -37,6 +26,8 @@
 $headerColor: #465def;
 $white: #ffffff;
 $whiteOpacity: rgba(255, 255, 255, 0.12);
+$greyFont: #838eab;
+$blueActive: #4457f3;
 
 // MIXINS
 
@@ -60,7 +51,7 @@ html {
   font-size: 62.5%;
 
   @media(max-width: 480px) {
-    font-size: 52%;
+    font-size: 55%;
   }
 }
 

@@ -154,6 +154,8 @@ function thumbDown() {
     }
   });
 
+  // Avarage
+
   reviewAvg.forEach(item => {
 
     if (this.id === item.dataset.thumbdown) {

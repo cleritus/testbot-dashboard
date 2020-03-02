@@ -1,5 +1,3 @@
-// handlers the layout: containers
-
 .header {
   padding: 10px 30px;
   background-color: $headerColor;
@@ -57,10 +55,13 @@
     }
   }
 
+  &__row {
+    font-size: 1.4rem;
+  }
+
   &__row-head {
-    @include flex-display(column, center, flex-start);
     min-height: 55px;
-    padding: 10px 20px;
+    padding: 20px 20px 0 20px;
     border-bottom: 1px solid #e6ebf1;
   }
 
@@ -69,17 +70,16 @@
   }
 
   &__row-answer {
+    display: block;
     margin-left: 27px;
     margin-top: 4px;
-    color: #838eab;
+    color: $greyFont;
   }
 
   &__row-foot {
     @include flex-row;
-    color: #838eab;
+    color: $greyFont;
   }
-
-
 }
 
 //SECTION 1
@@ -119,7 +119,7 @@
     }
 
     &__box:hover>.section__row-head {
-      background-color: #4457f3;
+      background-color: $blueActive;
     }
 
     &__box:hover .section__row-head>span {
@@ -127,7 +127,6 @@
     }
 
     &__row-head {
-      @include flex-display(column, flex-start, flex-start);
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
@@ -195,8 +194,8 @@
     &__row-foot {
 
       @media(max-width: 768px) {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
       }
 
       @media(max-width: 480px) {

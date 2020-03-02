@@ -10,25 +10,25 @@ button[type=submit],
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #838eab;
+  color: $greyFont;
   opacity: 1;
   font-size: 1.4rem;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #838eab;
+  color: $greyFont;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #838eab;
+  color: $greyFont;
 }
 
 // INPUT-option
 
 .input-option {
-  color: #838eab;
+  color: $greyFont;
   font-size: 1.4rem;
   font-family: "SF Pro Display", sans-serif;
 
@@ -116,5 +116,9 @@ button[type=submit],
     width: 236px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+  }
+
+  .search-input:focus {
+    box-shadow: 0 3px 6px $blueActive;
   }
 }
